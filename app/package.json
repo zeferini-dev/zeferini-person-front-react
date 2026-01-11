@@ -1,0 +1,29 @@
+{
+  "name": "react-cqrs-app",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.20.1",
+    "axios": "^1.7.7",
+    "@mui/material": "^5.15.22",
+    "@mui/icons-material": "^5.15.22",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.4.10",
+    "@rollup/rollup-win32-x64-msvc": "^4.22.5"
+  }
+}

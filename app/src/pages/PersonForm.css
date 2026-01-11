@@ -1,0 +1,90 @@
+.person-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.person-form__header {
+  margin-bottom: 24px;
+}
+
+.person-form__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.person-form__icon {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  color: #3f51b5;
+}
+
+.person-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.person-form__field {
+  width: 100%;
+}
+
+.person-form__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.person-form__actions button {
+  min-width: 140px;
+}
+
+.person-form__help {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: #e8eaf6;
+  border-radius: 8px;
+  color: #0d1b2a;
+}
+
+.person-form__help svg {
+  color: #3f51b5;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.person-form__help p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .person-form__title {
+    font-size: 24px;
+  }
+
+  .person-form__form {
+    padding: 16px 0;
+  }
+
+  .person-form__actions {
+    flex-direction: column;
+  }
+
+  .person-form__actions button {
+    width: 100%;
+  }
+}
+

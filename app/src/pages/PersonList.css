@@ -1,0 +1,115 @@
+.person-list {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.person-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.person-list__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.person-list__controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.person-list__icon {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  color: #3f51b5;
+}
+
+.person-list__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 64px 24px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.person-list__empty {
+  width: 100%;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.person-list__empty-icon {
+  font-size: 64px;
+  width: 64px;
+  height: 64px;
+  color: rgba(0, 0, 0, 0.38);
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.person-list__empty h2 {
+  margin: 16px 0 8px;
+  color: #1e293b;
+}
+
+.person-list__empty p {
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 24px;
+}
+
+.person-list__table {
+  width: 100%;
+}
+
+.person-list__email {
+  color: #3f51b5;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.person-list__email:hover {
+  text-decoration: underline;
+  color: #303f9f;
+}
+
+.person-list__actions-header {
+  text-align: right;
+}
+
+.person-list__actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.person-list__row {
+  transition: background-color 0.2s;
+}
+
+.person-list__row:hover {
+  background-color: rgba(63, 81, 181, 0.04);
+}
+
+@media (max-width: 768px) {
+  .person-list__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .person-list__title {
+    font-size: 24px;
+  }
+}
