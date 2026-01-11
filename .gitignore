@@ -48,3 +48,5 @@ lerna-debug.log*
 
 # Vite
 *.local
+
+dist
