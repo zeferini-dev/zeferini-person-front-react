@@ -65,7 +65,7 @@ export default function Navbar() {
           <span className="navbar__spacer"></span>
 
           <Link
-            href="http://localhost:3000/api"
+            href="http://localhost:8084/swagger/nestjs"
             target="_blank"
             rel="noreferrer"
             sx={{ color: 'inherit', display: 'flex', alignItems: 'center' }}
@@ -138,7 +138,7 @@ export default function Navbar() {
 
           <Box sx={{ padding: '16px' }}>
             <Link
-              href="http://localhost:3000/api"
+              href="http://localhost:8084/swagger/nestjs"
               target="_blank"
               rel="noreferrer"
               sx={{

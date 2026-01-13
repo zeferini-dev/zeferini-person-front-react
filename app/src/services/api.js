@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-const API_COMMAND_URL = 'http://localhost:3000';
-const API_QUERY_URL = 'http://localhost:3001';
+// API Gateway - Load balanced
+const API_GATEWAY_URL = 'http://localhost:8084';
+const API_COMMAND_URL = `${API_GATEWAY_URL}/api/persons`;
+const API_QUERY_URL = `${API_GATEWAY_URL}/api/query`;
 
 const commandApi = axios.create({
   baseURL: API_COMMAND_URL,
@@ -18,7 +20,7 @@ const queryApi = axios.create({
 });
 
 export const personService = {
-  // Queries (read from MongoDB port 3001)
+  // Queries (read from API Gateway -> MongoDB)
   getAll: async () => {
     const response = await queryApi.get('/persons');
     return response.data;
@@ -29,19 +31,19 @@ export const personService = {
     return response.data;
   },
 
-  // Commands (write to MySQL port 3000)
+  // Commands (write via API Gateway -> Load Balanced)
   create: async (data) => {
-    const response = await commandApi.post('/persons', data);
+    const response = await commandApi.post('', data);
     return response.data;
   },
 
   update: async (id, data) => {
-    const response = await commandApi.patch(`/persons/${id}`, data);
+    const response = await commandApi.patch(`/${id}`, data);
     return response.data;
   },
 
   delete: async (id) => {
-    const response = await commandApi.delete(`/persons/${id}`);
+    const response = await commandApi.delete(`/${id}`);
     return response.data;
   },
 };
