@@ -33,6 +33,7 @@ lerna-debug.log*
 !.vscode/extensions.json
 *.sublime-workspace
 *.sublime-project
+.vs/
 
 # Environment
 .env
